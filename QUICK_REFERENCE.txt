@@ -1,0 +1,193 @@
+# 🍵 CiTea Coolers - Quick Reference Card
+
+## 🚀 Start the App
+```bash
+python run.py
+```
+Then visit: `http://localhost:5000`
+
+---
+
+## 📍 Main URLs
+
+### Customer Pages
+| Page | URL |
+|------|-----|
+| Home | `/` |
+| Menu | `/menu` |
+| Cart | `/cart` |
+| Checkout | `/checkout` |
+| Login | `/login` |
+| Register | `/register` |
+| Profile | `/profile` |
+| Chat | `/chat` |
+
+### Admin Pages
+| Page | URL |
+|------|-----|
+| Dashboard | `/admin/dashboard` |
+| Products | `/admin/products` |
+| Add Product | `/admin/product/add` |
+| Edit Product | `/admin/product/edit/<id>` |
+| Categories | `/admin/categories` |
+| Add Category | `/admin/category/add` |
+| Orders | `/admin/order` |
+| Messages | `/admin/messages` |
+
+---
+
+## 🎨 Color Palette
+```
+Primary:   #5D2906 (Dark Brown)
+Secondary: #D35400 (Orange)
+Accent:    #FFD700 (Gold)
+Light:     #f8f8f8 (Off-white)
+Dark:      #333333 (Dark Gray)
+```
+
+---
+
+## 📊 Database Models
+
+### User
+```python
+id, username, email, password
+```
+
+### Product
+```python
+id, name, price, image
+```
+
+### Order
+```python
+id, customer_name, product_name, quantity, 
+total_price, order_date, status
+```
+
+### Message
+```python
+id, conversation_id, sender_name, sender_type,
+message_content, created_at, is_read
+```
+
+### Category
+```python
+id, name, description
+```
+
+---
+
+## ✅ What Works
+
+- ✅ User registration & login
+- ✅ Product browsing
+- ✅ Shopping cart (LocalStorage)
+- ✅ Checkout & orders
+- ✅ User profile
+- ✅ Admin product management
+- ✅ Admin category management
+- ✅ Order management
+- ✅ Customer chat
+
+---
+
+## 🛠️ Key Files
+
+| File | Purpose |
+|------|---------|
+| `app/user_routes.py` | Customer pages routing |
+| `app/product_routes.py` | Product management |
+| `app/admin_routes.py` | Admin pages |
+| `app/models.py` | Database models |
+| `app/__init__.py` | App initialization |
+| `templates/` | HTML templates |
+| `app/static/css/style.css` | Styling |
+| `app/static/js/script.js` | JavaScript |
+
+---
+
+## 🔧 Common Tasks
+
+### Add a New Product
+1. Login to `/admin/dashboard`
+2. Click "Products" → "Add Product"
+3. Fill form and submit
+
+### Create Order as Customer
+1. Go to `/menu`
+2. Click "Add to Cart"
+3. Go to `/cart`
+4. Click "Checkout"
+5. Fill details and submit
+
+### Update Order Status
+1. Go to `/admin/order`
+2. Find order
+3. Click "Mark as Completed" or "Cancel"
+
+### Respond to Customer
+1. Go to `/admin/messages`
+2. Click conversation
+3. Type and send reply
+
+---
+
+## 📱 Features
+
+**Shopping:**
+- Browse products
+- Add to cart
+- Manage quantities
+- Checkout
+
+**User:**
+- Register/Login
+- View profile
+- Chat with admin
+- Track orders
+
+**Admin:**
+- Manage products
+- Manage categories
+- Track orders
+- Message customers
+- View analytics
+
+---
+
+## 🔐 Test Credentials
+
+**Sample User:**
+- Username: `testuser`
+- Password: `Test123!`
+- Email: `test@citea.com`
+
+*(Register to create your own)*
+
+---
+
+## 📞 Quick Help
+
+**Issue:** App won't start
+- **Solution:** `pip install -r requirements.txt`
+
+**Issue:** Database error
+- **Solution:** Delete `site.db` and run `python run.py` again
+
+**Issue:** Cart empty after page refresh (mobile)
+- **Solution:** Use non-private browser mode
+
+**Issue:** Styling looks wrong
+- **Solution:** Refresh browser (Ctrl+Shift+R)
+
+---
+
+## 📖 Documentation
+
+- **Setup Guide:** See `SETUP_GUIDE.md`
+- **Full Details:** See `IMPLEMENTATION_COMPLETE.md`
+
+---
+
+**Last Updated:** January 28, 2026 ✅
